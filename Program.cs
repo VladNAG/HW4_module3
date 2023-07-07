@@ -5,6 +5,7 @@
         public static void Main(string[] args)
         {
             Starter1.Start();
+            Starter2.Start2();
         }
     }
 }

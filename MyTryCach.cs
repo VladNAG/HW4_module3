@@ -15,8 +15,9 @@ namespace HW4_module3
         }
 
         public delegate void EventHandler(int x, int y);
-        public delegate void DisplaySum();
+        public delegate void DisplaySum(int x, int y);
         public event EventHandler Event;
+        public DisplaySum DispSum => SumEvent;
         public int Sum { get; private set; }
         public void SumEvent(int x, int y)
         {
@@ -24,11 +25,11 @@ namespace HW4_module3
             Console.WriteLine(Sum);
         }
 
-        public void Try(DisplaySum x)
+        public void Try(DisplaySum displaySum, int x, int y)
         {
             try
             {
-                x();
+                displaySum(x, y);
             }
             catch (Exception)
             {

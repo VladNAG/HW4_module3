@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static HW4_module3.MyTryCach;
 
 namespace HW4_module3
 {
@@ -10,8 +11,11 @@ namespace HW4_module3
     {
         public static void Start()
         {
+            Console.WriteLine("HW part 1");
             var test = new MyTryCach();
-            test.SumEvent(5, 4);
+            test.Try(test.DispSum, 6, 7);
+            Console.WriteLine("Finish");
+            Console.WriteLine();
         }
     }
 }
